@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 
-export let getApi = (req: Request, res: Response, next: NextFunction) => {
+export let getApi = (req: Request, res: Response) => {
     console.log("get API");
-    next();
+    res.send("getApi");
 };
