@@ -8,16 +8,17 @@ import * as errorHandler from "errorhandler";
 // dotenv reads a configured .env file from a defined location and loads the values in process.env
 import * as dotenv from "dotenv";
 
-
-import { Request, Response, NextFunction } from "express";
-
-import * as apiRouteHandler from "./routes/api.route";
-import * as resumeRouteHandler from "./routes/resume.route";
+// the module tsoa automatically generates the routes from the annotations in the controller classes
+import { RegisterRoutes } from "./routes";
+// We still need to import the controller to have them crawled by the generator
+import "./controller/api.controller";
+import "./controller/resume.controller";
 
 // Swagger support
 const swaggerUi = require("swagger-ui-express");
-const swaggerDocument = require("./config/swagger/api-docs.json");
+const swaggerDocument = require("./swagger.json");
 
+// Define ExpressJS
 const server = express();
 
 /**
@@ -28,11 +29,14 @@ dotenv.config({ path: ".env" });
 /**
  * RouteHandler.
  */
-server.get("/api", apiRouteHandler.getApi);
-server.get("/api/resume", resumeRouteHandler.getResume);
+// server.get("/api", apiRouteHandler.getApi);
+RegisterRoutes(server);
 
+// Serve the swagger ui at /api-docs
 server.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
+
+// Configure ExpressJS
 server.use(logger("dev"));
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: false }));
