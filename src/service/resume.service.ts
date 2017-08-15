@@ -9,7 +9,19 @@ import { provideSingleton } from "../inversify/ioc";
 
 @provideSingleton(ResumeService)
 export class ResumeService {
-    getResume(): Promise<Resume> {
+    getResumeData(): Promise<Resume> {
         return Promise.resolve(resume_data);
+    }
+
+    getTopLevelResumeData(): Promise<string[]> {
+        return this.getResumeData().then(resume_data => {
+            console.log("getTopLevelResumeData" + Object.keys(resume_data));
+            return Object.keys(resume_data);
+        });
+    }
+
+    getResumeDetail(identifier: string): Promise<any> {
+        console.log("ResumeService identifier: " + identifier);
+        return this.getResumeData().then(resume_data => resume_data[identifier]);
     }
 }

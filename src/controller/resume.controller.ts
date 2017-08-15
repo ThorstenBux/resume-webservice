@@ -13,12 +13,27 @@ export class ResumeController {
     // Injection objects is possible without the @inject decorator because TS exports the needed metadata automatically when we use 'reflect-metadata'
     constructor(private resumeService: ResumeService) { }
     @Get()
-    async getResume(): Promise<Resume> {
-        return this.resumeService.getResume().then(
+    async getResume(): Promise<string> {
+        return this.resumeService.getResumeData().then(
             async resume => {
-                console.log("Resume name: " + resume.basics.name);
-                return await resume;
+                return await JSON.stringify(resume);
             });
-        // return "getResume";
+    }
+
+    @Get("topics")
+    async getResumeTopics(): Promise<string> {
+        console.log("getResumeTopics");
+        return this.resumeService.getTopLevelResumeData().then(
+            async resumeTopLevel => {
+                return await JSON.stringify(resumeTopLevel);
+            });
+    }
+
+    @Get("{identifier}")
+    async getResumeDetail(identifier: string): Promise<string> {
+        return this.resumeService.getResumeDetail(identifier).then(
+            async resumeDetail => {
+                return await JSON.stringify(resumeDetail);
+            });
     }
 }

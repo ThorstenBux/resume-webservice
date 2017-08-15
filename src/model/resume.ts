@@ -321,4 +321,5 @@ export class Resume {
   lastModified?: string;
     [k: string]: any;
   };
+  [k: string]: any;
 }

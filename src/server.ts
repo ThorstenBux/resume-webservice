@@ -3,6 +3,8 @@ import * as express from "express";
 import * as logger from "morgan";
 import * as bodyParser from "body-parser";
 
+import * as cors from "cors";
+
 // https://www.npmjs.com/package/errorhandler
 import * as errorHandler from "errorhandler";
 // dotenv reads a configured .env file from a defined location and loads the values in process.env
@@ -20,6 +22,7 @@ const swaggerDocument = require("./swagger.json");
 
 // Define ExpressJS
 const server = express();
+server.use(cors());
 
 /**
  * Load environment variables from .env file, where API keys and passwords are configured.
