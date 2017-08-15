@@ -1,4 +1,4 @@
-export class ResumeWork{
+export class ResumeWork {
 /**
        * e.g. Facebook
        */
@@ -32,4 +32,4 @@ export class ResumeWork{
        */
   highlights?: string[];
       [k: string]: any;
-};
+}

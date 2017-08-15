@@ -1,5 +1,6 @@
 /* tslint:disable */
 import { Controller, ValidateParam, FieldErrors, ValidateError, TsoaRoute } from 'tsoa';
+import { iocContainer } from './inversify/ioc';
 import { ApiController } from './controller/api.controller';
 import { ResumeController } from './controller/resume.controller';
 
@@ -19,7 +20,7 @@ export function RegisterRoutes(app: any) {
                 return next(err);
             }
 
-            const controller = new ApiController();
+            const controller = iocContainer.get<ApiController>(ApiController);
 
 
             const promise = controller.getApi.apply(controller, validatedArgs);
@@ -37,7 +38,7 @@ export function RegisterRoutes(app: any) {
                 return next(err);
             }
 
-            const controller = new ResumeController();
+            const controller = iocContainer.get<ResumeController>(ResumeController);
 
 
             const promise = controller.getResume.apply(controller, validatedArgs);
