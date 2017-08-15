@@ -115,7 +115,10 @@ if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
   eval $NPM_CMD install --production
   # 4\. Compile TypeScript
   echo Transpiling TypeScript in $DEPLOYMENT_TARGET
-  call :ExecuteCmd node $DEPLOYMENT_TARGET\node_modules\typescript\bin\tsc -p "$DEPLOYMENT_TARGET"
+  node $DEPLOYMENT_TARGET/node_modules/tsoa/dist/cli.js routes
+  call :ExecuteCmd node $DEPLOYMENT_TARGET/node_modules/typescript/bin/tsc -p $DEPLOYMENT_TARGET
+  call :ExecuteCmd node $DEPLOYMENT_TARGET/node_modules/tsoa/dist/cli.js routes
+
   exitWithMessageOnError "npm failed"
   cd - > /dev/null
 fi
