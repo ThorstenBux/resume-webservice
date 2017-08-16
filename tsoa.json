@@ -2,7 +2,7 @@
     "swagger": {
         "outputDirectory": "./dist/",
         "entryFile": "./src/server.ts",
-        "host": "localhost:3000",
+        "host": "http://resume-webservice.azurewebsites.net",
         "basePath": "/v1",
         "yaml": false
     },

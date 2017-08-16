@@ -27,7 +27,7 @@ server.use(cors());
 /**
  * Load environment variables from .env file, where API keys and passwords are configured.
  */
-dotenv.config({ path: ".env" });
+// dotenv.config({ path: ".env" });
 
 /**
  * RouteHandler.
