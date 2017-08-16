@@ -8,7 +8,7 @@ export const resume_data: Resume = {
     "email": "thorsten.bux@outlook.com",
     "phone": "+64 2040921033",
     "url": "https://augmentmy.world",
-    "summary": "<em><strong>With all I do, I believe in empowering people. I believe in exciting technology.</strong> The way I empower people is by designing solutions which are easy to understand inspiring and exciting to use.<br> I create great software.<br><br> With more than seven years of work experience in information technology, I have a profound knowledge in software engineering and solution design. In the last two years, I created live changing products using Augmented Reality and shaped an Open Source software product. Before that I took pride in realizing Internet of Things (IoT) products for various industries.</em>",
+    "summary": "<em><strong>With all I do, I believe in empowering people. I believe in inspiring products.</strong> The way I empower people is by designing solutions which are easy to understand inspiring and exciting to use.<br> I create great software.<br><br> With more than seven years of work experience in information technology, I have a profound knowledge in software engineering and solution design. In the last two years, I created live changing products using Augmented Reality and shaped an Open Source software product. Before that I took pride in realizing Internet of Things (IoT) products for various industries.</em>",
     "location": {
       "address": "337 Mt. Pleasant Road",
       "postalCode": "8081",
@@ -436,7 +436,8 @@ export const resume_data: Resume = {
       "keywords": [
         "IBM BlueMix",
         "Amazon Web Services (AWS)",
-        "OpenShift"
+        "OpenShift",
+        "Azure"
       ]
     },
     {
@@ -575,14 +576,14 @@ export const resume_data: Resume = {
   ],
   "references": [
     {
+        "name": "Oxford Brookes University",
+        "reference": "Augmented Reality is a great fun! What if it is what you do everyday!  Great course by @daqri @artoolkit_ @oxford_brookes",
+        "date": "2017-01-26"
+    },
+    {
       "name": "Go Media Academy",
       "reference": "As a Community interest company, we exist for the benefit of children and young people in our communities. Offering new innovative media technologies and providing unique experiences for everyone. The Augmented Reality Web application has exceeded all of our expectations. Children and young people can now take their learning experiences further through a browser.  This program has generated much excitement among the community and schools in Northern Ireland.",
       "date": "2016-09-01"
-    },
-    {
-      "name": "Oxford Brookes University",
-      "reference": "Augmented Reality is a great fun! What if it is what you do everyday!  Great course by @daqri @artoolkit_ @oxford_brookes",
-      "date": "2017-01-26"
     }
   ]
 };
