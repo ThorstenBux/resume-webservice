@@ -2,7 +2,6 @@
   "name": "resume-webservice",
   "version": "0.0.0",
   "private": true,
-  "main": "dist/server.js",
   "scripts": {
     "start": "npm run build && npm run watch",
     "build": "npm run build-swagger && npm run tslint",
@@ -26,7 +25,6 @@
     "express": "~4.15.2",
     "inversify": "^4.3.0",
     "inversify-binding-decorators": "^3.0.0",
-    "jade": "~1.11.0",
     "morgan": "~1.8.1",
     "reflect-metadata": "^0.1.10",
     "swagger-ui-express": "^2.0.6",
