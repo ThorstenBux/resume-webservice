@@ -118,7 +118,7 @@ if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
   "D:/Program Files (x86)/nodejs/6.9.1/node.exe" -v
   "D:/Program Files (x86)/nodejs/6.9.1/node.exe" $DEPLOYMENT_TARGET/node_modules/tsoa/dist/cli.js routes
   "D:/Program Files (x86)/nodejs/6.9.1/node.exe" $DEPLOYMENT_TARGET/node_modules/typescript/bin/tsc -p "$DEPLOYMENT_TARGET"
-  "D:/Program Files (x86)/nodejs/6.9.1/node.exe" $DEPLOYMENT_TARGET/node_modules/tsoa/dist/cli.js routes
+  "D:/Program Files (x86)/nodejs/6.9.1/node.exe" $DEPLOYMENT_TARGET/node_modules/tsoa/dist/cli.js swagger
 
   exitWithMessageOnError "npm failed"
   cd - > /dev/null
