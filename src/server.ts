@@ -13,7 +13,6 @@ import * as dotenv from "dotenv";
 // the module tsoa automatically generates the routes from the annotations in the controller classes
 import { RegisterRoutes } from "./routes";
 // We still need to import the controller to have them crawled by the generator
-import "./controller/api.controller";
 import "./controller/resume.controller";
 
 // Swagger support
@@ -22,22 +21,20 @@ const swaggerDocument = require("./swagger.json");
 
 // Define ExpressJS
 const server = express();
-server.use(cors());
+// Cors setting possible if needed
+// server.use(cors());
 
 /**
  * Load environment variables from .env file, where API keys and passwords are configured.
  */
-// dotenv.config({ path: ".env" });
-
+dotenv.config({ path: `${server.get("env")}.env` });
 /**
  * RouteHandler.
  */
-// server.get("/api", apiRouteHandler.getApi);
 RegisterRoutes(server);
 
 // Serve the swagger ui at /api-docs
 server.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-
 
 // Configure ExpressJS
 server.use(logger("dev"));
