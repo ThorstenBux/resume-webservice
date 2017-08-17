@@ -8,7 +8,7 @@ export const resume_data: Resume = {
     "email": "thorsten.bux@outlook.com",
     "phone": "+64 2040921033",
     "url": "https://augmentmy.world",
-    "summary": "<em><strong>With all I do, I believe in empowering people. I believe in inspiring products.</strong> The way I empower people is by designing solutions which are easy to understand inspiring and exciting to use.<br> I create great software.<br><br> With more than seven years of work experience in information technology, I have a profound knowledge in software engineering and solution design. In the last two years, I created live changing products using Augmented Reality and shaped an Open Source software product. Before that I took pride in realizing Internet of Things (IoT) products for various industries.</em>",
+    "summary": "<em><strong>With all I do, I believe in empowering people. I believe in inspiring products.</strong> The way I empower people is by designing solutions which are easy to understand, inspiring and exciting to use.<br> I create outstanding software.<br><br> With more than seven years of work experience in information technology, I have a profound knowledge in software engineering and solution design. In the last two years, I created live changing products using Augmented Reality and shaped an Open Source software product. Before that I took pride in realizing Internet of Things (IoT) products for various industries.</em>",
     "location": {
       "address": "337 Mt. Pleasant Road",
       "postalCode": "8081",
